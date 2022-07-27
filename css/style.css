@@ -1,0 +1,43 @@
+/*-------------------global class---------------------------------------------------------------------*/
+* {
+    /*it means all the margin padding border would be 0 , if we want some kind of styling we can define separately*/
+margin:0;
+padding:0;
+border:0;
+/*it will remove the default underline from the text*/
+text-decoration: none;
+/*Removing dots from the list*/
+list-style: none;
+box-sizing: border-box;
+}
+
+:root {
+    /*root create a global class for  colour where we can use colour again n again with ease and it will create
+    variable ofcolour*/
+--color-primary: #6c63ff;
+--color-success: #00bf8e;
+--color-warning: #f7c94b;
+--danger: #f75842;
+--danger-variant: rgba(247, 88, 66, 0.4);
+--white: #ffffff;
+--color-light: rgba(255, 255, 255, 0.7);
+--black: #000000;
+--color-bg: #1f2641;
+--color-bg1: #2e3267;
+--color-bg2: #424890;
+
+/*---- making a default container width and transition to use with an ease-----*/
+--container-width-lg: 76%;
+--container-width-md: 90%;
+--container-width-sm: 94%;
+
+transition: all 400ms ease;
+
+}
+
+body{
+    
+}
+/*------x--------x-----global class-----------x-------------x-----------------x-----------------x-----------*/
+
+/*---------------------------nav-----------------------------------------------------------------------*/
