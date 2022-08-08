@@ -1,3 +1,13 @@
+
+
+
+
+
+
+
+
+
+
 /*-------------------global class---------------------------------------------------------------------*/
 * {
     /*it means all the margin padding border would be 0 , if we want some kind of styling we can define separately*/
@@ -27,17 +37,135 @@ box-sizing: border-box;
 --color-bg2: #424890;
 
 /*---- making a default container width and transition to use with an ease-----*/
---container-width-lg: 76%;
+--container-width-lg: 80%;
 --container-width-md: 90%;
 --container-width-sm: 94%;
 
-transition: all 400ms ease;
+--transition: all 400ms ease;
 
 }
 
 body{
-    
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.7;
+    color:var(--white);
+    background: var(--color-bg);
+}
+
+.container{
+    width: var(--container-width-lg);
+    /*because i want the container on the middle of the website because the content of the website is in the 
+    container*/
+    margin: 0 auto;
+}
+
+section{
+    /*6 rem means 6*16pixels because 1 rem = 16 pixels*/
+    padding: 6rem 0;
+
+}
+
+section h2{
+    text-align: center;
+    margin-bottom: 4rem;
+
+}
+
+h1, h2, h3, h4, h5{
+    line-height: 1.2;
+}
+h1{
+    font-size: 2.4rem;
+}
+
+h2{
+    font-size: 2rem;
+}
+
+h3{
+font-size: 1.6rem;
+
+}
+
+h4{
+    font-size: 1.3rem;
+}
+
+a{
+    color:var(--white)
+}
+
+img{
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.btn{
+    display: inline-block;
+    color:var(--black);
+    background: var(--white);
+    padding: 1rem 2rem;
+    border: 1px solid transparent;
+    font-weight: 500;
+    transition:var(--transition);
+    border-radius: 20px;
+}
+
+.btn:hover{
+    background:transparent;
+    color:var(--white);
+    border-color: var(--white);
+}
+
+.btn-primary{
+    background: var(--danger);
+    color: var(--white);
 }
 /*------x--------x-----global class-----------x-------------x-----------------x-----------------x-----------*/
 
+
 /*---------------------------nav-----------------------------------------------------------------------*/
+nav{
+    background: transparent;
+    /*100vw means entire width of the container*/
+    width: 100vw;
+    height: 80px;
+    /*the nav bar position is fixed because whenever we try to scroll down the page the nav bar remains at page. it
+    should be seen through all the time*/
+    position: fixed;
+    /*top is 0 means it will always remain on the top*/
+    top:0;
+    z-index: 11;
+}
+
+.nav-container{
+    height: 100%;
+    /*flex move the things to grid pattern*/
+    display: flex;
+    /*give a space on the nav menu contents*/
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav button{
+    display: none;
+}
+
+/*In NAV MENU the ul list present in the menu got styled*/
+.nav-menu{
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.nav-menu a{
+    font-size: 0.9rem;
+    /*for smooth transition*/
+    transition: var(--transition);
+    
+}
+
+.nav-menu a:hover{
+    color:var(--color-bg2);
+}
