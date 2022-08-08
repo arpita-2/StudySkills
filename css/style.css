@@ -178,7 +178,7 @@ header{
     /*to push it dowm form under the nav bar*/
     top: 5rem;
     overflow: hidden;
-    height: 70vw;
+    height: 50vw;
     margin-bottom: 5rem;
 
 }
@@ -191,10 +191,75 @@ display: grid;
 grid-template-columns: 1fr 1fr;
 align-items: center;
 gap: 5rem;
-height: 100%;
+height: 70%;
 }
 
 .header-left p{
     margin: 1rem 0 2.4rem;
+}
+
+/*===================header====================================================*/
+
+/*----------------------Category-------------------------------------------------------------------------------*/
+.categories{
+    background: var(--color-bg1);
+    height: 29rem;
+}
+
+.categories h1{
+    line-height: 1;
+    margin-bottom: 3rem;
+}
+
+.categories-container{
+    display: grid;
+    grid-template-columns: 40% 60%;
     
 }
+
+.categories-left{
+    margin-right: 4rem;
+}
+
+
+
+.categories-left p {
+    margin: 1rem 0 3rem;
+}
+
+.categories-right {
+    display: grid;
+    /*repeat here given because i want to repeat three articles in one grid row with 1 fraction each*/
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+}
+
+/*Category class work only on category right side*/
+
+.category {
+    background:  var(--color-bg2);
+    padding: 2rem;
+    border-radius: 2rem;
+    transition: var(--transition);
+}
+
+.category:hover {
+    box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.category-icon{
+    background: var(--color-primary);
+    padding: 1.7rem;
+    border-radius: 0.9rem;
+}
+
+.category h5{
+    margin: 2rem 0 1rem;
+
+}
+
+.category p{
+    font-size: 0.85rem;
+}
+/*=====================Category==================================================================*/
