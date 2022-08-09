@@ -290,3 +290,92 @@ height: 70%;
     background: var(--color-success);
 }
 /*=====================Category==================================================================*/
+
+/*--------------------------------------Our popular courses-------------------------------------------*/
+.courses {
+    margin-top: 10rem;
+}
+
+.courses-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+/*Each class of course styling*/
+.course {
+    background: var(--color-bg1);
+    text-align: center;
+    border: 1px solid transparent;
+    transition: var(--transition);
+
+}
+
+.course:hover {
+    /*when hover effect will start the background will become transparent*/
+    background: transparent;
+    border-color: var(--color-primary);
+}
+
+.courses-info {
+    padding: 3rem;
+}
+
+.courses-info p{
+    margin: 1.2rem 0 2rem;
+    font-size: 0.9rem;
+
+}
+
+/*======================================Our Popular Courses===============================================*/
+
+
+/*-----------------------------------FAQS-------------------------------------------------------------*/
+.faqs {
+    background: var(--color-bg1);
+    /*box -shadow has been given inside of the section with 0 x-axiss and y-axis with rgba black with 
+    transparency 0.5*/
+
+    /*If we remove inset the box shdow shows outside the section of faq*/
+    box-shadow: inset 0 0 3rem rgba(0, 0, 0, 0.5);
+}
+
+.faqs-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+/*now each article got styling*/
+.faq {
+padding: 2rem;
+display: flex;
+align-items: center;
+gap: 1.4rem;
+height: fit-content;
+background: var(--color-primary);
+cursor: pointer;
+}
+
+.faq h4{
+    font-size: 1rem;
+    line-height: 2.2rem;
+}
+
+.faq-icon {
+    align-self: flex-start;
+    font-size: 1.2rem;
+}
+
+.faq p{
+    margin-top: .8rem;
+    /*here display has been given none because i want to hide the paragraph whenever anybody open my webiste*/
+    display: none;
+}
+
+.faq.open p{
+    display: block;
+}
+
+
+
+/*====================================FAQS=================================================================*/
