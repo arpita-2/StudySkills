@@ -18,6 +18,9 @@
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
 
+  <!-----------------AOS LIBRARY-------------------------------------->
+  <link rel="stylesheet" href="./css/aos.css">
+
     <!-------style css--------------------------->
     <link rel="stylesheet" href="./css/style.css">
 
@@ -40,20 +43,23 @@
 
             <!--bar icon and multiply icon has been given as a type of button-->
 
-            <button class="open-menu-btn"><i class="uil uil-bars"></i></button>
-            <button class="close-menu-btn"><i class="uil uil-multiply"></i></button>
+            <button id="open-menu-btn"><i class="uil uil-bars"></i></button>
+            <button id="close-menu-btn"><i class="uil uil-multiply"></i></button>
          </div>
     </nav>
     <!------xxxxxxxxxxxxxx-------------x-----x--navigation-------------------x-----------x------------------------------x-->
 
     <!------------------------main site content ---------------------------------------------------------->
 <!--header section-------------------------------------------->
+
 <header>
+    
 
     <!--making a container which has right and left section in the header-->
    <div class="container header-container">
+    
     <!-------left section----------->
-    <div class="header-left">
+    <div class="header-left" data-aos="fade-up">
 <h1>Grow your skills to advance your path</h1>
 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe impedit sit corporis similique!
  Omnis aliquid qui aperiam error repudiandae. Error nobis labore accusamus saepe dicta eius, earum 
@@ -62,12 +68,14 @@
     </div>
 <!-----------right section------------>
     <div class="header-right">
-        <div class="header-right-image">
+        <div class="header-right-image" data-aos="fade-up">
             <img src="./images/header.svg">
         </div>
 
     </div>
+
    </div>
+
 </header>
 <!--==============================-header section============================-->
 
@@ -87,7 +95,7 @@
         <div class="categories-right">
             <!--created a article and class named category-->
             <!---1st article-->
-            <article class="category">
+            <article class="category" data-aos="flip-left">
                 <span class="category-icon"><i class="uil uil-bitcoin-circle"></i></span>
                 <h5>Blockchain</h5>
                 <p>Lorem ipsum dolor sit amet,
@@ -98,7 +106,7 @@
 
             <!--2nd article-->
 
-            <article class="category">
+            <article class="category" data-aos="flip-left">
                 <span class="category-icon"><i class="uil uil-palette"></i></span>
                 <h5>Graphic Design</h5>
                 <p>Lorem ipsum dolor sit amet,
@@ -109,7 +117,7 @@
 
             <!--3rd article-->
 
-            <article class="category">
+            <article class="category" data-aos="flip-left">
                 <span class="category-icon"><i class="uil uil-usd-circle"></i></span>
                 <h5>Finance</h5>
                 <p>Lorem ipsum dolor sit amet,
@@ -120,7 +128,7 @@
 
             <!--4th article-->
 
-            <article class="category">
+            <article class="category" data-aos="flip-left">
                 <span class="category-icon"><i class="uil uil-megaphone"></i></span>
                 <h5>Marketing</h5>
                 <p>Lorem ipsum dolor sit amet,
@@ -131,7 +139,7 @@
 
             <!--5th article-->
 
-            <article class="category">
+            <article class="category" data-aos="flip-left">
                 <span class="category-icon"><i class="uil uil-music"></i></span>
                 <h5>Music</h5>
                 <p>Lorem ipsum dolor sit amet,
@@ -142,7 +150,7 @@
 
             <!--6th article------>
 
-            <article class="category">
+            <article class="category" data-aos="flip-left">
                 <span class="category-icon"><i class="uil uil-bag"></i></span>
                 <h5>Business</h5>
                 <p>Lorem ipsum dolor sit amet,
@@ -423,8 +431,8 @@
             <!--paragraph-->
 
             <div class="testimonial-body">
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non quos, maxime sint nesciunt tenetur er
-                    consequatur quas molestiae tempore nostrum magni ad vero neque possimus saepe, incidunt sequi, nobis odio?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum commodi dolorem aliquid ducimus nulla sunt eveniet
+                    dicta officiis atque. Nulla quibusdam consequuntur impedit quam vel ipsum, animi ullam culpa quasi.</p>
                 </div>
         </article>
 
@@ -446,9 +454,8 @@
             <!--paragraph-->
 
             <div class="testimonial-body">
-                <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet accusamus aut voluptas at ad beatae cumque,
-                     assumenda quasi, veritatis accusantium vel eligendi modi corrupti sunt, quae porro nemo
-                      dolor tempora!</P>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum commodi dolorem aliquid ducimus nulla sunt eveniet
+                    dicta officiis atque. Nulla quibusdam consequuntur impedit quam vel ipsum, animi ullam culpa quasi.</p>
             </div>
         </article>
 
@@ -492,16 +499,70 @@
             <!--paragraph-->
 
             <div class="testimonial-body">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum esse modi porro reiciendis consectetur accusamus
-                 eligendi sint nulla nemo quam, deleniti alias debitis dolorem qui dolorum
-                  obcaecati molestiae sit cumque.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum commodi dolorem aliquid ducimus nulla sunt eveniet
+                    dicta officiis atque. Nulla quibusdam consequuntur impedit quam vel ipsum, animi ullam culpa quasi.</p>
             </div>
         </article>
  </div>
-
-
+  <!--swiper pagination of slider from swiper web..-->
+ <div class="swiper-pagination"></div>
 
 </section>
+
+
+<!-------------------------------FOOTER------------------------------------------------------------------->
+<footer class="footer">
+    <div class="container footer-container">
+        <div class="footer-1">
+            <a href="index.html" class="footer-logo"><h4>Study Skills</h4></a>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto, quaerat!</p>
+        </div>
+
+        <div class="footer-2">
+            <h4>Permalinks</h4>
+            <ul class="permalinks">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./courses.html">Courses</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-3">
+            <h4>Primacy</h4>
+            <ul class="privacy">
+                <li><a href="#">privacy</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+                <li><a href="#">Return Policy</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-4">
+            <h4>Contact Us</h4>
+            <div>
+                <p>dasguptaarpita1999@gmail.com</p>
+            </div>
+
+            <ul class="footer-socials">
+                <li><a href="https://www.instagram.com/arpitadasgupta199/"><i class="uil uil-instagram"></i></a>
+                </li>
+                <li><a href="https://www.facebook.com/tsezom.paldon"><i class="uil uil-facebook-f"></i></a>
+                </li>
+                <li><a href="#"><i class="uil uil-twitter"></i></a>
+                </li>
+                
+            </ul>
+        </div>
+        
+    </div>
+
+    <div class="copyright">
+        <small>Copyright &copy; Study Skills by Arpita</small>
+    </div>
+</footer>
+
+
+<!--==============================FOOTER=================================================================-->
 
 <!--==============================Student Testimonial===============================================-->
 
@@ -511,8 +572,11 @@
       <!-------------------SWIPER JS CDN JS------------------------------------------------------------>
       <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
+      <!-------------------AOS LIBRARY----------------------------------------------------->
+      <script src="./js/aos.js"></script>
+
       <!----------------------------APP JS---------------------------------------------------------------->
-    <script src="./app.js"></script>
+    <script src="./js/app.js"></script>
 
 
 

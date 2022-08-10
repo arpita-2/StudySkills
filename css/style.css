@@ -1,8 +1,85 @@
+/*=========================================Making responsive website for all devices=======================
+===========================================================================================================*/
+
+/*anything  below 1024px*/
+@media screen and (max-width: 1024px) {
+   .container {
+    width: var(--container-width-md);
+   }
+   h1 {
+    font-size: 2.2rem;
+   }
+   h2 {
+    font-size: 1.7rem;
+   }
+
+   h3 {
+    font-size: 1.4rem;
+   }
+
+   h4 {
+    font-size: 1.2rem;
+   }
+
+   /*NAVBAR*/
+   nav button {
+    display: inline-block;
+    background: transparent;
+    font-size: 1.8rem;
+    color: white;
+    cursor: pointer;
+   }
+
+   nav button#close-menu-btn {
+    display: none;
+   }
+
+   .nav-menu {
+    /*nav menu is creating  as a column wise */
+    position: relative;
+    top: 5rem;
+    /*right is 5% because the container size is 90% and it gives margin from both right side and
+    left side 5% each*/
+    right: 5%;
+    height: fit-content;
+    width: 18rem;
+    flex-direction: column;
+    gap: 0;
+    display: none;
+   }
+   .nav-menu li {
+    width: 100%;
+    height: 5.8rem;
+   }
+   /*To add animation on the menu bar */
+
+   @keyframes animateNavItems {
+    0% {
+
+    }
+
+    100%{
+        
+    }
+   }
+
+   .nav-menu li a {
+    background: var(--color-primary);
+    box-shadow: -4rem 6rem 10rem rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+   }
+   .nav-menu li a:hover {
+    background: var(--color-bg2);
+    color: var(--white)
+   }
+}
 
 
-
-
-
+/*===========================================================================================================
+=============================================================================================================*/
 
 
 
@@ -210,7 +287,7 @@ height: 70%;
 /*----------------------Category-------------------------------------------------------------------------------*/
 .categories{
     background: var(--color-bg1);
-    height: 29rem;
+    height: 33rem;
 }
 
 .categories h1{
@@ -376,6 +453,113 @@ cursor: pointer;
     display: block;
 }
 
-
-
 /*====================================FAQS=================================================================*/
+
+/*-------------------------Testimonial container---------------------------------------------------------*/
+.testimonial-container {
+   overflow: hidden;
+   position: relative;
+   margin-bottom: 5rem;
+
+}
+
+.testimonial {
+    padding-top: 2rem;
+}
+
+.avatar {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 1rem;
+    border: 1rem solid var(--color-bg1);
+    cursor:pointer;
+}
+
+.testimonial-inf0 {
+    text-align: center;
+}
+
+.testimonial-body{
+    background: #4338ca;
+    padding: 2rem;
+    margin-top: 3rem;
+    /*position relative has been given because to show the psuedo elemnet at the css design because when i have given
+    psuedo element -1.5rem top it disappears from the screen*/
+    position: relative;
+    cursor: grab;
+}
+
+/*A CSS pseudo-element is used to style specified parts of an element.
+
+For example, it can be used to:
+
+Style the first letter, or line, of an element
+Insert content before, or after, the content of an element
+*/
+
+.testimonial-body::before {
+    /*here before is the psuedo elements*/
+    content: "";
+    /*to have a gradient effect on the block*/
+    background: linear-gradient(135deg,
+        transparent, #4338ca, #4338ca );
+
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    /*it is present now the left side of the body, I want it in middle so...*/
+    position: absolute;
+    left: 50%;
+    top: -1.5rem;
+
+    /*Now i want this particular block in the triangle shape so..*/
+    /*using transform to rotate it 45 degree*/
+    transform: rotate(45deg);
+}
+/*=============================testimonial container=====================================================*/
+
+/*----------------------------------FOOTER-----------------------------------------------------------------*/
+footer {
+    background: var(--color-bg1);
+    padding-top: 5rem;
+    font-size: 0.9rem;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 5rem;
+}
+
+.footer-container > div h4 {
+    margin-bottom: 1.2rem;
+}
+
+.footer-1 p {
+    margin: 0rem 0 2rem;
+}
+
+footer ul li {
+    margin-bottom: 0.7rem;
+}
+
+footer ul li:hover {
+    text-decoration: underline;
+}
+
+.footer-socials {
+    display:flex;
+    gap: 1rem;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 4rem;
+    padding: 1.2rem 0;
+    border-top: 1px solid var(--color-bg2);
+}
+/*=====================================FOOTER==============================================================*/

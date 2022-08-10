@@ -1,11 +1,14 @@
 //change nav bafr styles on scroll//
 
 //when we try to scroll the nav menu should come with a background colour while scrolling//
+//animation on scroll insta
+
 
 window.addEventListener('scroll', () =>{
     document.querySelector('nav').classList.toggle
     //window scroll with a background will start from 0 pixel //
     ('window-scroll', window.scrollY > 0)
+    
 })
 
 
@@ -37,4 +40,35 @@ faqs.forEach(faq => {
             icon.className = "uil uil-plus";
         }
     })
+
+    AOS.init();
 })
+
+//=========================================media query=========================================================
+//---------------show hide nav menu when click on bar--------------------------------------
+const menu = document.querySelector(".nav-menu");
+const menuBtn = document.querySelector("#open-menu-btn");
+
+const closeBtn = document.querySelector("#close-menu-btn");
+
+menuBtn.addEventListener('click', () => {
+    //menu then change the style of the display into flex when click on open menu button
+    menu.style.display = "flex";
+    //it will show the menu list
+    closeBtn.style.display = "inline-block";
+    //it will show immediately the cross  button 
+    menuBtn.style.display = "none";
+})
+
+//close nav menu
+const closeNav = () => {
+     //menu then change the style of the display into none when click on close menu button
+     menu.style.display = "none";
+     //it will not show the menu list
+     closeBtn.style.display = "none";
+     //it will show immediately the open button 
+     menuBtn.style.display = "inline-block";
+}
+
+closeBtn.addEventListener('click', closeNav)
+
