@@ -345,13 +345,21 @@
 <!--=================Frequently asked questions======================================================-->
 
 <!-----------------------Student Testimonials------------------------------------------------------>
-<section class="container testimonial-container">
+<section class="container testimonial-container mySwiper">
+    <!--!!!!!!MYSWIPPER class has been given after importing slider css and js!!!!!!!-->
+
     <h2>Student Testimonials</h2>
     <!--each testimonial has their own article-->
 
-    <div>
+    <div class="swiper-wrapper">
+        <!--!!!!!!SWIPPER -WRAPPER class has been given after importing slider css and js!!!!!!!-->
+
+
         <!--first article-->
-        <article class="testimonial">
+        <article class="testimonial swiper-slide">
+            <!--!!!!swiper slide has given  to make a slider on the testimonial . It has added later by me . 
+            First i have make testimonial , did css and after that i added SWIPER SLIDER CLASS!!!!-->
+
             <!--each article has their avatar and their title and paragraph-->
             <div class="avatar">
                 <img src="./images/avatar1.jpg" alt="">
@@ -368,14 +376,13 @@
             <!--paragraph-->
 
             <div class="testimonial-body">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing 
-                    elit. Delectus quod molestias laboriosam facilis dignissimos maxime commodi alias voluptas vitae dolorem?
-                </p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium repellat explicabo in? Earum possimus soluta at! 
+                    Ipsa impedit fugiat rerum excepturi quis eveniet quasi, quaerat sapiente aspernatur esse sunt quia.</p>
             </div>
         </article>
 
          <!--second article-->
-        <article class="testimonial">
+        <article class="testimonial swiper-slide">
             <!--each article has their avatar and their title and paragraph-->
             <div class="avatar">
                 <img src="./images/avatar2.jpg" alt="">
@@ -392,13 +399,13 @@
             <!--paragraph-->
 
             <div class="testimonial-body">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas nihil illo ipsam nisi dolor mollitia unde totam quia sapiente ut fugiat dolore voluptatibus, quos voluptates odit consectetur deserunt incidunt sint.
-                </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum commodi dolorem aliquid ducimus nulla sunt eveniet
+                     dicta officiis atque. Nulla quibusdam consequuntur impedit quam vel ipsum, animi ullam culpa quasi.</p>
             </div>
         </article>
 
          <!--third article-->
-        <article class="testimonial">
+        <article class="testimonial swiper-slide">
             <!--each article has their avatar and their title and paragraph-->
             <div class="avatar">
                 <img src="./images/avatar3.jpg" alt="">
@@ -415,13 +422,13 @@
             <!--paragraph-->
 
             <div class="testimonial-body">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores perferendis doloribus amet consequuntur quod commodi temporibus. Tenetur suscipit, praesentium excepturi ratione vero alias mollitia, numquam saepe voluptates dolorum labore. Expedita?
-                </p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non quos, maxime sint nesciunt tenetur er
+                    consequatur quas molestiae tempore nostrum magni ad vero neque possimus saepe, incidunt sequi, nobis odio?</p>
                 </div>
         </article>
 
          <!--fourth article-->
-        <article class="testimonial">
+        <article class="testimonial swiper-slide">
             <!--each article has their avatar and their title and paragraph-->
             <div class="avatar">
                 <img src="./images/avatar4.jpg" alt="">
@@ -438,12 +445,14 @@
             <!--paragraph-->
 
             <div class="testimonial-body">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati aspernatur nostrum iste, quibusdam blanditiis, quam non doloribus quidem sit, similique ut eum vero quisquam debitis expedita aliquid beatae nobis a?</p>
+                <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet accusamus aut voluptas at ad beatae cumque,
+                     assumenda quasi, veritatis accusantium vel eligendi modi corrupti sunt, quae porro nemo
+                      dolor tempora!</P>
             </div>
         </article>
 
          <!--fifth article-->
-        <article class="testimonial">
+        <article class="testimonial swiper-slide">
             <!--each article has their avatar and their title and paragraph-->
             <div class="avatar">
                 <img src="./images/avatar5.jpg" alt="">
@@ -460,12 +469,12 @@
             <!--paragraph-->
 
             <div class="testimonial-body">
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus, aliquid natus a, eos voluptate explicabo, nam corporis deleniti similique sapiente enim neque voluptatem. Quo id at magnam laboriosam quisquam inventore?
-                </p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, similique veniam! Maxime veritatis itaque obcaecati 
+                    nulla quidem quam numquam illo cumque iure, corporis, libero cum fugit. Autem recusandae expedita saepe?</p>
             </div>
         </article>
          <!--sixth article-->
-        <article class="testimonial">
+        <article class="testimonial swiper-slide">
             <!--each article has their avatar and their title and paragraph-->
             <div class="avatar">
                 <img src="./images/avatar6.jpg">
@@ -482,8 +491,9 @@
             <!--paragraph-->
 
             <div class="testimonial-body">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error nulla, eveniet explicabo fugit incidunt libero. Possimus numquam excepturi est mollitia dolores praesentium debitis ullam, soluta quod asperiores incidunt aliquam sequi?
-                </p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum esse modi porro reiciendis consectetur accusamus
+                 eligendi sint nulla nemo quam, deleniti alias debitis dolorem qui dolorum
+                  obcaecati molestiae sit cumque.</p>
             </div>
         </article>
  </div>
@@ -496,11 +506,26 @@
 
     <!--=================================main site content================================================-->
 
-    
+
       <!-------------------SWIPER JS CDN JS------------------------------------------------------------>
       <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
       <!----------------------------APP JS---------------------------------------------------------------->
     <script src="./app.js"></script>
+
+
+
+    <!--I can paste this code on js also but i want this slider only at my homepage so I have written on 
+    index.html page-->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    </script>
 </body>
 </html>
