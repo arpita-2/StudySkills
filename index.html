@@ -376,8 +376,9 @@
             <!--paragraph-->
 
             <div class="testimonial-body">
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium repellat explicabo in? Earum possimus soluta at! 
-                    Ipsa impedit fugiat rerum excepturi quis eveniet quasi, quaerat sapiente aspernatur esse sunt quia.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum commodi dolorem aliquid ducimus nulla sunt eveniet
+                    dicta officiis atque. Nulla quibusdam consequuntur impedit quam vel ipsum, animi ullam culpa quasi.</p>
+                
             </div>
         </article>
 
@@ -469,8 +470,8 @@
             <!--paragraph-->
 
             <div class="testimonial-body">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, similique veniam! Maxime veritatis itaque obcaecati 
-                    nulla quidem quam numquam illo cumque iure, corporis, libero cum fugit. Autem recusandae expedita saepe?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum commodi dolorem aliquid ducimus nulla sunt eveniet
+                    dicta officiis atque. Nulla quibusdam consequuntur impedit quam vel ipsum, animi ullam culpa quasi.</p>
             </div>
         </article>
          <!--sixth article-->
@@ -519,12 +520,20 @@
     index.html page-->
     <script>
         var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 3,
+            //when window width is >= 600
+        slidesPerView: 1,
         spaceBetween: 30,
         pagination: {
           el: ".swiper-pagination",
           clickable: true,
         },
+        //when window width is <= 600
+        breakpoints: {
+            600: {
+                slidesPerView: 2,
+        
+            }
+        }
       });
     </script>
 </body>
