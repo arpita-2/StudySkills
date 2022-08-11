@@ -29,6 +29,7 @@ box-sizing: border-box;
 /*---- making a default container width and transition to use with an ease-----*/
 --container-width-lg: 80%;
 --container-width-md: 90%;
+--container-width-realme: 92%;
 --container-width-sm: 94%;
 
 --transition: all 400ms ease;
@@ -634,6 +635,15 @@ footer ul li:hover {
      grid-template-columns: 1fr 1fr;
     }
  }
+
+ /*====================================================================================================*/
+ /*
+ @media screen and (max-width: 740px) {
+  .container {
+    width: var(--container-width-realme);
+  }
+    
+  }
  
  
  
@@ -654,7 +664,7 @@ footer ul li:hover {
  
      /*HEADER*/
      header {
-         height: 100vw;
+         height: 100%;
  
      }
  
