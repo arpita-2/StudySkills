@@ -60,15 +60,14 @@ menuBtn.addEventListener('click', () => {
     menuBtn.style.display = "none";
 })
 
-//close nav menu
 const closeNav = () => {
-     //menu then change the style of the display into none when click on close menu button
-     menu.style.display = "none";
-     //it will not show the menu list
-     closeBtn.style.display = "none";
-     //it will show immediately the open button 
-     menuBtn.style.display = "inline-block";
+    menu.style.display = "none";
+    closeBtn.style.display = "none";
+    menuBtn.style.display = "inline-block";
 }
 
+
 closeBtn.addEventListener('click', closeNav)
+
+
 
